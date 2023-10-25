@@ -39,7 +39,7 @@
     align-items: center;
     
 }
-    .contenedor{
+    .contenedor-home{
         width: 80%;
         height: 80%;
         display: flex;
@@ -52,10 +52,56 @@
 }
 
     article h1{
-        font-size: 3em;
+        font-size: 2.7em;
         margin-bottom: 1em;
     }
 
     article p  {
         margin-bottom: 1em;
     }
+
+/* GALERIA */
+
+.contenedor-galeria{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .contenedor-galeria img{
+        width: 33.33%;
+    }
+
+/* BLOG */
+
+.article-blog{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 90px;
+}
+
+    .article-blog h1{
+ 
+        text-align: center;
+        font-size: 3em;
+    }
+
+.blog-section{
+   
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90vw;
+}
+    .blog-section img{
+        width: 50vw;
+    }
+
+.contenedor-blog{
+
+    text-align: center;
+    width: 40%;
+    font-size: 1.3em;
+
+}
