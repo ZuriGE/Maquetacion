@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    /* padding: 2px; */
+    /* display: flex; */
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .contenedor {
+        border: 6px solid rgb(196, 192, 192);
+        border-radius: 6px;
+        width: 300px;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2px;
+    }
+
+        .header, .nav, .article, .lateral, .section, .aside, .footer {
+            border: 3px solid;
+            border-radius: 3px;
+            padding: 6px;
+        }
+
+
+        .header{
+            border-color: rgb(68, 224, 29);
+            border-radius: 3px;
+            width: 100%;
+            height: 60px;
+        }
+
+        .nav{
+            border-color: red;
+            width: 100%;
+        }
+
+        .main{
+            display:flex;
+            column-gap: 2px;
+            height: 300px;
+        }
+
+            .article{
+                border-color:blue;
+                width: 66%;
+                padding: 6px 3px 2px 3px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                row-gap: 2px;
+            }
+
+                .invisible{
+                    height:50%;
+                }
+
+                    .section{
+                        border-color: violet;
+                        width: 100%;
+                    }
+
+                    .footer--bajo{
+                        height:fit-content;
+                        padding: 0px 6px;
+                    }
+
+
+
+            .lateral{
+                border-color: orange;
+                width: 34%;
+                padding: 6px 3px;
+                row-gap: 2px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+                .aside{
+                    border-color: turquoise;
+                    width: 100%;
+                    height:100px;
+                }
+
+                    .aside--alto{
+                        height:165px;
+                    }
+
+        .footer{
+            border-color: yellow;
+            width: 100%;  
+        }
+
+
+
