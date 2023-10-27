@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="codeNotch.css" />
+		<script src="https://kit.fontawesome.com/7cc87d6653.js" crossorigin="anonymous"></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="header">
+			<a title="Home" href="..//Maquetacion/codeNotch.html"><img src="https://www.codenotch.com/wp-content/uploads/2021/05/Group-23.png" alt="Logo de Codenotch" /></a>
+
+			<nav class="barra-nav">
+				<a title="Consulta todos nuestros cursos" href="../Maquetacion/codeNotch_cursos.html">Cursos</a>
+				<a title="Ponte en contacto" href="..//Maquetacion/codeNotch_contacto.html">Contacto</a>
+				<a title="Conoce al equipo de Codenotch" href="../Maquetacion/codeNotch_equipo.html">Equipo</a>
+			</nav>
+		</header>
+
+		<main class="main-cto">
+			<section class="formulario">
+				<h1>Formulario de contacto</h1>
+				<h3>Rellena tus datos y nos pondremos en contacto contigo a la mayor brevedad.</h3>
+
+				<form action="">
+					<fieldset>
+						<label for="nombre">Nombre<span>*</span></label>
+						<input type="text" id="nombre" name="nombre" required />
+						<label for="apellidos">Apellido(s)<span>*</span></label>
+						<input type="text" id="apellidos" name="apellidos" required />
+						<label for="telefono">Teléfono<span>*</span></label>
+						<input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required />
+						<label for="mail">Email<span>*</span></label>
+						<input type="email" name="main" id="mail" required />
+						<label for="">¿Sobre qué curso quieres recibir información?<span>*</span></label>
+						<select name="cursos-cto" id="">
+							<option value="">Full-Time Web Developer</option>
+							<option value="">Part-Time Web Developer</option>
+							<option value="">Full-Time Data Science</option>
+						</select>
+						<label for="extra">¿Quieres preguntarnos algo en concreto?</label>
+						<textarea name="extra" id="extra" cols="auto" rows="10"></textarea>
+
+						<p>Los campos marcados con <span>*</span> son obligatorios</p>
+
+						<input class="boton" type="submit" value="Enviar" />
+					</fieldset>
+				</form>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<a href="https://www.linkedin.com/school/codenotch/" target="_blank" class="linkRRSS"><i class="fa-brands fa-linkedin"></i></a>
+			<a href="https://twitter.com/CodenotchMAD" target="_blank" class="linkRRSS"><i class="fa-brands fa-twitter"></i></a>
+			<a href="https://www.instagram.com/codenotchmad/?hl=es" target="_blank" class="linkRRSS"><i class="fa-brands fa-instagram"></i></a>
+			<a href="https://www.facebook.com/codenotchMAD/" target="_blank" class="linkRRSS"><i class="fa-brands fa-facebook"></i></a>
+		</footer>
+	</body>
+</html>
