@@ -357,3 +357,12 @@ input[type="submit"]:active {
 .boton-enviar{
     margin-top: 4rem;
 }
+
+.infoJs{
+    padding: 1rem;
+}
+
+.infoJs p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

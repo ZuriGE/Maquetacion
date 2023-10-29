@@ -31,7 +31,7 @@
 			<section class="intro">
 				<section class="texto-intro">
 					<h2>¿Cansado de organizar tus propios viajes?</h2>
-					<p>En <strong>TraVintage</strong> organizamos tu viaje para que tu no tengas que hacerlo.</p>
+					<p>En <strong>VinTravel</strong> organizamos tu viaje para que tu no tengas que hacerlo.</p>
 
 					<p>Nos especializamos en turismo local. Da igual si lo que te apetece es comer marisco en Galicia o tomar el sol en las Islas Canarias, <strong>somos tu agencia</strong>.</p>
 
@@ -46,7 +46,7 @@
 						</div>
 						<div class="icono-texto">
 							<i class="fa-solid fa-envelope"></i>
-							<p>viajevintage@vintravel.com</p>
+							<p>viajesvintage@vintravel.com</p>
 						</div>
 						<div class="icono-texto">
 							<i class="fa-solid fa-map-location-dot"></i>
@@ -60,7 +60,7 @@
 						</div>
 					</section>
 				</section>
-				<div class="sol-container"><img src="../agenciaViajes/img/logo.png" alt="" /></div>
+				<!-- <div class="sol-container"><img src="../agenciaViajes/img/logo.png" alt="" /></div> -->
 			</section>
 
 			<section class="destinos" id="ofertas">
@@ -157,12 +157,16 @@
 						<label for="nPersonas">Número de personas</label>
 						<input type="number" id="nPersonas" name="nPersonas" pattern="[0-9]{9}" required />
 
-						<input class="boton boton-enviar" type="submit" value="Solicitar información" />
+						<input class="boton boton-enviar" type="submit" id="info" value="Solicitar información" />
 
-						<input class="boton boton-filtrar" type="" value="Filtrar" />
+						<input class="boton boton-filtrar" type="submit" value="Filtrar" id="filtro" />
 					</fieldset>
 				</form>
 			</section>
+		</div>
+
+		<div class="infoJS">
+			<p>↓ ↓ ↓ <strong>La info del botón filtrar aparece aquí</strong> ↓ ↓ ↓</p>
 		</div>
 
 		<script src="./viajes.js"></script>
