@@ -10,6 +10,7 @@ const nPersonas = document.getElementById("nPersonas");
 
 const botonInfo = document.getElementById("info");
 const botonFiltro = document.getElementById("filtro");
+const filterInfo = document.getElementById("filterInfo");
 
 botonInfo.addEventListener("click", (e) => {
 	e.preventDefault();
@@ -29,10 +30,12 @@ botonFiltro.addEventListener("click", (e) => {
 	let filtrado = solicitudes.filter((consultas) => consultas.destino.toLowerCase() == "mallorca" || consultas.destino.toLowerCase() == "canarias" || consultas.destino.toLowerCase() == "galicia");
 	console.log(filtrado);
 
-	let newElement = document.createElement("p");
+	filterInfo.innerText = "";
+	let text = "";
 
 	filtrado.forEach((consulta) => {
-		document.querySelector(".infoJS").appendChild(newElement);
-		newElement.textContent = `Nombre: ${consulta.nombre[0].toUpperCase() + consulta.nombre.slice(1)}, teléfono: ${consulta.tel}, viaje para ${consulta.nPersonas} persona(s) a ${consulta.destino[0].toUpperCase() + consulta.destino.slice(1)} el día ${consulta.fechaInicio}.`;
+		text = text + `Nombre: ${consulta.nombre[0].toUpperCase() + consulta.nombre.slice(1)}, teléfono: ${consulta.tel}, viaje para ${consulta.nPersonas} persona(s) a ${consulta.destino[0].toUpperCase() + consulta.destino.slice(1)} el día ${consulta.fechaInicio}.\n`;
 	});
+
+	filterInfo.innerText = text;
 });

@@ -358,11 +358,18 @@ input[type="submit"]:active {
     margin-top: 4rem;
 }
 
-.infoJs{
+.infoJS{
+    width: 100vw;
+    height: auto;
     padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
 }
 
-.infoJs p{
-    margin-top: 10px;
-    margin-bottom: 10px;
+.infoJS p{
+    padding: 1rem 1rem;
+    font-size: 2rem;
 }
