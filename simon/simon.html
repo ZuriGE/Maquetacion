@@ -10,14 +10,21 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<main class="gameBoard">
-			<button class="button green" id="green">1</button>
-			<button class="button red" id="red">2</button>
-			<button class="button yellow" id="yellow">3</button>
-			<button class="button blue" id="blue">4</button>
-		</main>
+		<aside>
+			<h2>LEVEL <span id="level">1</span>:</h2>
+			<h2 class="turn inactive" id="simon">SIMON</h2>
+			<h2 class="turn inactive" id="player">PLAYER</h2>
+		</aside>
+		<div class="container">
+			<main class="gameBoard">
+				<button class="button green" id="green">1</button>
+				<button class="button red" id="red">2</button>
+				<button class="button yellow" id="yellow">3</button>
+				<button class="button blue" id="blue">4</button>
+			</main>
 
-		<button class="start" id="start">START</button>
+			<button class="start" id="start">START</button>
+		</div>
 
 		<script src="simon.js"></script>
 	</body>

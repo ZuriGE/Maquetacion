@@ -18,19 +18,53 @@
 }
 
 html {
-    background-image: url("./img/9207849.jpg"); 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url("./img/9207849.jpg") no-repeat top center/cover; 
 }
     
 body{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display:flex;  
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-size: 16px;
 }
+
+aside{
+  padding: 3rem 0
+}
+
+h2{
+  margin-top: 30px;
+  
+  color:#ffffff;
+  /* border: 6px solid #ffffff; */
+  background-color: transparent;
+  font-size: 3rem;
+  border-radius: 15px;
+  padding-top: 1rem;
+  font-family: 'press start 2P',sans-serif;
+  cursor: pointer;
+  filter: drop-shadow(0 0 15px currentColor) drop-shadow(0 0 50px currentColor) contrast(2) brightness(2);
+  transition: .2s
+}
+
+.turn{
+  color:var(--greenOn);
+  padding-left:3rem;
+}
+
+.turn.inactive{
+  color: black;
+  filter: none;
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .gameBoard{
     margin-top:20px;
@@ -42,7 +76,7 @@ body{
     align-content: center;
     flex-wrap: wrap;
     background-color: rgb(24, 24, 24);
-    border-radius: 15vw;
+    border-radius: 20vw;
     box-shadow:
     1px 1px 1px black,
     inset 2px 3px 5px rgba(0, 0, 0, 0.3),
@@ -55,16 +89,22 @@ body{
     width: 40%;
     height: 40%;
     cursor: pointer;
-     border-radius: 3vw;
-     margin:10px;
-     border: none;
-     outline: none;
-     border: solid 2px rgb(0 0 0 70%);
-     box-shadow:
-     1px 1px 1px black,
-     inset 2px 3px 5px rgba(0, 0, 0, 0.3),
-     inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 2vw;
+    margin:10px;
+    border: none;
+    outline: none;
+    border: solid 2px rgb(0 0 0 70%);
+    box-shadow:
+    1px 1px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    font-size: 6rem;
+    font-family: 'press start 2P',sans-serif;
+   
   }
+
+
+
   
   .green {
    
@@ -105,7 +145,7 @@ body{
     color:#bd40ee;
     border: 6px solid #bd40ee;
     background-color: transparent;
-    font-size: 48px;
+    font-size: 3rem;
     border-radius: 15px;
     padding: 10px 30px;
     font-family: 'press start 2P',sans-serif;

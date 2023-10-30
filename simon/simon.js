@@ -8,8 +8,12 @@ const green = document.getElementById("green");
 const red = document.getElementById("red");
 const yellow = document.getElementById("yellow");
 const blue = document.getElementById("blue");
+const lvl = document.getElementById("level");
 
-let level = 1;
+const simonTurn = document.getElementById("simon");
+const playerTurn = document.getElementById("player");
+
+let level = 0;
 
 //GAME OVER
 let endGame = () => {
@@ -35,68 +39,79 @@ let numGenerator = () => {
 };
 
 let simon = () => {
-	let newNum = numGenerator();
-	simonSays.push(newNum);
-	console.log("simon says");
-	console.log(simonSays);
-	let simonIndex = 0;
-	currentIndex = 0;
-
-	let colorLoop = () => {
-		if (simonIndex == simonSays.length) {
-			// Juego terminado
-			return;
-		}
-
-		let element = simonSays[simonIndex];
-		let light;
-		let newColor;
-		let oldColor;
-		let audioSource;
-
-		switch (element) {
-			case 1:
-				light = green;
-				newColor = "var(--greenOn)";
-				oldColor = "var(--greenOff)";
-				audioSource = new Audio("./img/c_sharp.wav");
-				break;
-			case 2:
-				light = red;
-				newColor = "var(--redOn)";
-				oldColor = "var(--redOff)";
-				audioSource = new Audio("./img/d_sharp.wav");
-				break;
-			case 3:
-				light = yellow;
-				newColor = "var(--yellowOn)";
-				oldColor = "var(--yellowOff)";
-				audioSource = new Audio("./img/f_sharp.wav");
-				break;
-			case 4:
-				light = blue;
-				newColor = "var(--blueOn)";
-				oldColor = "var(--blueOff)";
-				audioSource = new Audio("./img/g_sharp.wav");
-				break;
-		}
-
-		light.style.backgroundColor = newColor;
-		light.style.filter = `drop-shadow(0 0 15px ${newColor}) drop-shadow(0 0 50px ${newColor}) contrast(2) brightness(2)`;
-
-		("drop-shadow(0 0 15px #bd40ee) drop-shadow(0 0 50px #bd40ee) contrast(2) brightness(2)");
-
-		audioSource.play();
-
+	setTimeout(() => {
+		simonTurn.classList.remove("inactive");
+		playerTurn.classList.add("inactive");
 		setTimeout(() => {
-			light.style.filter = "none";
-			light.style.backgroundColor = oldColor;
-			simonIndex++;
-			setTimeout(colorLoop, 500);
-		}, 700);
-	};
+			console.log(level);
+			level++;
+			lvl.innerText = level;
+			let newNum = numGenerator();
+			simonSays.push(newNum);
+			console.log("simon says");
+			console.log(simonSays);
+			let simonIndex = 0;
+			currentIndex = 0;
 
-	setTimeout(colorLoop, 1000);
+			let colorLoop = () => {
+				if (simonIndex == simonSays.length) {
+					// Juego terminado
+					simonTurn.classList.add("inactive");
+					playerTurn.classList.remove("inactive");
+					return;
+				}
+
+				let element = simonSays[simonIndex];
+				let light;
+				let newColor;
+				let oldColor;
+				let audioSource;
+
+				switch (element) {
+					case 1:
+						light = green;
+						newColor = "var(--greenOn)";
+						oldColor = "var(--greenOff)";
+						audioSource = new Audio("./img/c_sharp.wav");
+						break;
+					case 2:
+						light = red;
+						newColor = "var(--redOn)";
+						oldColor = "var(--redOff)";
+						audioSource = new Audio("./img/d_sharp.wav");
+						break;
+					case 3:
+						light = yellow;
+						newColor = "var(--yellowOn)";
+						oldColor = "var(--yellowOff)";
+						audioSource = new Audio("./img/f_sharp.wav");
+						break;
+					case 4:
+						light = blue;
+						newColor = "var(--blueOn)";
+						oldColor = "var(--blueOff)";
+						audioSource = new Audio("./img/g_sharp.wav");
+						break;
+				}
+
+				light.style.backgroundColor = newColor;
+				light.style.filter = `drop-shadow(0 0 15px ${newColor}) drop-shadow(0 0 50px ${newColor}) contrast(2) brightness(2)`;
+
+				("drop-shadow(0 0 15px #bd40ee) drop-shadow(0 0 50px #bd40ee) contrast(2) brightness(2)");
+
+				audioSource.play();
+
+				setTimeout(() => {
+					light.style.filter = "none";
+					light.style.backgroundColor = oldColor;
+					simonIndex++;
+					setTimeout(colorLoop, 500);
+				}, 400);
+			};
+
+			setTimeout(colorLoop, 400);
+		}, 300);
+	}, 500);
 };
 
 //TURNO JUGADOR
@@ -114,6 +129,10 @@ let checkResult = () => {
 		if (currentIndex == simonSays.length) {
 			playerArray = [];
 			console.log("OK");
+			setTimeout(() => {
+				playerTurn.classList.add("inactive");
+				simonTurn.classList.remove("inactive");
+			}, 300);
 			simon();
 		}
 		// si no coinciden game over
@@ -175,9 +194,11 @@ blue.addEventListener("click", (e) => {
 
 start.addEventListener("click", (e) => {
 	e.preventDefault();
-
+	playerTurn.classList.add("inactive");
+	simonTurn.classList.add("inactive");
 	simonSays = [];
 	playerArray = [];
 	currentIndex = 0;
+	level = 0;
 	simon();
 });
