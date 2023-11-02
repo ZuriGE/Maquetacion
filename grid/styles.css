@@ -1,0 +1,249 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+}
+
+/*RETO1*/
+.grid-cont1{
+    display: grid;
+    grid-template-columns: 400px 200px 400px;
+    grid-template-rows: 250px 250px;
+}
+
+.a1{
+    background-color: #9ffe4d;
+}
+.b1{
+    background-color: #fe952c;
+}
+.c1{
+    background-color: #ff5e23;
+}
+.d1{
+    background-color: #ff0019;
+}
+.e1{
+    background-color: #0028f5;
+}
+.f1{
+    background-color: #fffc43;
+}
+
+/*RETO2*/
+
+.grid-cont2{
+    width: 1000px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.grid-cont2--interior{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
+
+}
+
+.a2, .c2, .e2{
+    background-color: #9ffe4d;
+    color: #000;
+}
+
+.b2, .d2, .f2{
+    background-color: #000;
+    
+}
+
+/*RETO3*/
+
+.grid-cont3{
+    width: 1000px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: [x0] 2fr [x1] 1fr [x2] 1fr [x3];
+    grid-template-rows: [y0] 1fr [y1] 5fr [y2] 1fr [y3];
+}
+
+.header3{
+    grid-column: x0/x3;
+    grid-row: y0/y1;
+    background-color: #000;
+    padding-top:12px;
+    font-size: 32px;
+
+}
+
+.grid-cont3--interior-main{
+    grid-column: x0/x2;
+    grid-row: y1/y2;
+    background-color: #0231ed;
+    display: grid;
+    grid-template-columns: [x0] 2fr [x1] 1fr [x2];
+    grid-template-rows: [y0] 1fr [y1] 2fr [y2];
+    padding:16px;
+}
+
+.contenido3{
+
+    grid-column: x0/x2;
+    grid-row: y0/y1;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    text-align: left;
+    padding:10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+
+.texto1-3,
+.texto2-3{
+    border: 1px solid #fff;
+    text-align: left;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.texto1-3{
+    grid-column: x0/x1;
+    grid-row: y1/y2;
+    
+}
+.texto2-3{
+    grid-column: x1/x2;
+    grid-row: y1/y2;
+    margin-left: 6px;
+    border: 1px solid #fff;
+}
+
+.grid-cont3--interior-menu{
+    grid-column: x2/x3;
+    grid-row: y1/y2;
+    background-color: #00d29f;
+    display: grid;
+    grid-template-columns: [x0] 1fr [x1];
+    grid-template-rows: [y0] 1fr [y1] 1fr [y2] 1fr [y3] 1fr [y4];
+    padding:12px;
+}
+
+.menu3{
+    margin: 3px 0;
+    border: solid 2px #000;
+    padding-top: 24px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.menuItem3{
+    margin: 3px 0;
+    background-color: #000;
+    padding-top: 24px;
+    font-size: 12px;
+}
+
+.grid-cont3--interior-footer{
+    grid-column: x0/x3;
+    grid-row: y2/y3;
+    background-color: #621dc0;
+    padding: 6px;
+    display: grid;
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2];
+    grid-template-rows: [y0] 1fr [y1]
+}
+
+.footer3,
+.contacto3{
+      border:   solid 2px #000;
+      padding:18px;
+      font-size: 12px;
+      font-weight: 600;
+}
+
+.contacto3{
+
+    margin-left: 6px;
+}
+
+/*RETO3*/
+
+.grid-cont4{
+    width: 1000px;
+    height: 500px;
+    display: grid;
+    grid-template-areas: 
+    "header header imagen"    
+    "aside contenido contenido"
+    "aside contenido contenido"
+    "aside contenido contenido"
+    "aside contenido contenido"
+    "footer footer footer"
+    
+}
+
+.header4{
+    
+    grid-area: header;
+    background-color: #b01e13;
+    padding-top: 10px;
+}
+.imagen4{
+    grid-area: imagen;
+    background-color: #560f0d;
+    padding-top: 10px;
+}
+
+
+.grid-cont4--interior1{
+    grid-area: aside;
+   
+    background-color: #ff6824;
+    display: grid;
+    grid-template-areas: "aside1" "empty" "aside2";
+    padding:10px;
+}
+.aside1-4{
+    grid-area: aside1;
+    background-color: #fff;
+    color:  #ff6824;
+    padding-top: 10px;
+}
+.aside2-4{
+    grid-area: aside2;
+    background-color: #fff;
+    color:  #ff6824;
+    padding-top: 10px;
+}
+
+.grid-cont4--interior2{
+    grid-area: contenido;
+   
+    background-color: #ff391e;
+    display: grid;
+    grid-template-areas: "contenido" "texto";
+    padding:10px;
+}
+
+.contenido4{
+    grid-area: contenido;
+    border: 2px solid #fff;
+    margin-bottom: 2px;
+    padding-top: 10px;
+}
+.texto4{
+    grid-area: texto;
+    border: 2px solid #fff;
+    margin-top: 2px;
+    padding-top: 10px;
+}
+.footer4{
+    grid-area: footer;
+    background-color: #560f0d;
+    padding-top: 10px;
+}
+
