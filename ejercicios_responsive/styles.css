@@ -37,7 +37,7 @@ main{
 
 
 .lh{
-    border: 2px solid red;
+   
     width: 380.31px;
     height: 581.14px;
     margin: 12px 0 0;
@@ -98,13 +98,13 @@ main{
 
 
 .up__img-cont {
-    /* border: 2px solid aqua; */
+  
     width: 179px;
     height: 51px;
     cursor: pointer;
 }
 .up__logo{
-    /* border: 1px solid green; */
+    
     background-image: url(https://static.cdninstagram.com/rsrc.php/v3/yS/r/ajlEU-wEDyo.png);
     background-position: 0px -52px;
     background-size: auto;
@@ -115,18 +115,18 @@ main{
 }
 
 .up__login{
-    /* border: 2px solid brown; */
+    
     width: 346px;
     height: 300.98px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* gap:10px */
+    
 }
 
 .login__user{
-    /* border: 2px solid black; */
+   
     width: 342px;
     height: 240.98px;
     margin-top: 12px;
@@ -138,7 +138,7 @@ main{
 
 
 .login__user--cont{
-    /* border: 1px solid gray; */
+    
     width: 258px;
     display: flex;
     margin:0 40px 6px;
@@ -220,7 +220,7 @@ main{
     height: 35px;
     outline: none;
     border: none;
-    /* border: 2px solid palevioletred; */
+    
     overflow: hidden;
     z-index: 1;
     -webkit-text-fill-color: black;
@@ -239,7 +239,7 @@ main{
     font-size: 10px;
     transform-origin: left;
     transition: 0.1s ease-out;
-    /* border: 1px solid red; */
+    
     color: var(--txtSec);
     
 }
@@ -247,7 +247,7 @@ main{
 
 
 .showPassword{
-    /* border: solid 2px fuchsia; */
+    
     visibility: visible;
     cursor:pointer;
     font-size: 14px;
@@ -289,7 +289,7 @@ main{
 .login__user__separator{
     width: 258px;
     height: 22.98px;
-    /* border: 2px solid hotpink; */
+    
     display: flex;
     margin-top: 8px;
     margin-bottom:8px;
@@ -302,7 +302,7 @@ main{
 .login__user__separator--o{
     width: 13.83px;
     height: 18.98px;
-    /* border: 2px solid tomato; */
+    
     margin: 0 18px;
     font-size: 13px;
     color: var(--txtSec);
@@ -316,7 +316,7 @@ main{
 }
 
 .login__user__fbButton{
-    /* border: solid 2px lightskyblue; */
+    
     width: 258px;
     height: 28px;
     display: flex;
@@ -331,7 +331,7 @@ main{
 
 
 .login__user__fbButton--icon{
-    /* border: 2px solid fuchsia; */
+   
     background-image: url(https://static.cdninstagram.com/rsrc.php/v3/y5/r/TJztmXpWTmS.png);
     background-position: -413px -259px;
     width: 17px;
@@ -347,7 +347,7 @@ main{
 }
 
 .login__forgot{
-    /* border: 2px solid cyan; */
+    
     line-height: 16px;
     margin: 0;
     font-size: 12px;
@@ -357,14 +357,14 @@ main{
 }
 
 .login__ilegal--cont{
-    /* border: 2px solid cornflowerblue; */
+    
     width: 346px;
     height: 67px;
     padding: 16px 32px;
 }
 
 .login__ilegal{
-    /* border: solid 2px lightgreen; */
+    
     margin:-2px 0 -3px;
     width: 282px;
     height: 36px;
