@@ -150,10 +150,11 @@ let boxChecked = (element) => {
 	child = element.querySelector("i");
 
 	if (element.classList.contains("disabled")) {
+		child.classList.remove("shake");
 		child.classList.add("shake");
 		setTimeout(() => {
-			gb.classList.remove("shake");
-		}, 5000);
+			child.classList.remove("shake");
+		}, 500);
 	} else {
 		let coord = element.id;
 		let row = parseInt(coord[1]) - 1;
