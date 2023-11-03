@@ -240,7 +240,7 @@
 
 .endGame__container{
     height: 30%;
-    padding:5%;
+    padding: 30px;
     justify-content:center
 }
 
@@ -257,15 +257,19 @@
     background-color: none;
     background: none;
     font-size: 48px;
+    padding-right: 5px
 }
 
 .endGame__container--low{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px red
 }
 
 .endGame__container h2{
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
     
     
 }
@@ -297,8 +301,6 @@
 
 .footer__button{
     border:none;
-    border-radius: 8px;
-    
     outline: none;
     background-color: #527773;
     color:#FAD586;
@@ -397,20 +399,34 @@
     .resetScore{
     width: 45%;
     height: 100%;
+    border-radius: 10px;
 }
     .endGame{
-    padding: 0.5%;
+    /* padding: 30px; */
     width: 70vw;
     height: 100vh;
     border-radius: 20px;
 }
 
     .endGame__container--up{
-   
+        
         justify-content: flex-end;
+        
     }
+    .endGame__container h2{
+    font-size: 64px;
+    margin-bottom: 60px;
+    
+    
+}
+
+.endGame__container p{
+    font-size: 48px;
+    margin-top: 10px
+}
 }
 
 @media(min-height: 875px){
 
 }
+
