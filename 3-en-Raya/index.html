@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://kit.fontawesome.com/7cc87d6653.js" crossorigin="anonymous"></script>
+		<title>3 en Raya</title>
+	</head>
+	<body class="grid-container--ext">
+		<div class="grid-container">
+			<header class="scoreBoard">
+				<div class="score score--tot">
+					<h2>Total</h2>
+					<span class="scoreCount" id="totalGameCount">-</span>
+				</div>
+				<div class="score score--p1" id="score--p1">
+					<h2>Player 1</h2>
+					<span class="scoreCount" id="scoreCountP1">-</span>
+				</div>
+
+				<div class="score score--tie">
+					<h2>Tie</h2>
+					<span class="scoreCount" id="scoreCountTie">-</span>
+				</div>
+				<div class="score score--p2" id="score--p2">
+					<h2>Player 2</h2>
+					<span class="scoreCount" id="scoreCountP2">-</span>
+				</div>
+			</header>
+
+			<div class="endGame" id="endGame">
+				<div class="endGame__container endGame__container--up">
+					<button class="closeMsg" id="closeMsg"><i class="fa-solid fa-rectangle-xmark"></i></button>
+				</div>
+				<div class="endGame__container endGame__container--low">
+					<h2 id="finalText">Prueba</h2>
+					<p>Puedes jugar de nuevo y seguir acumulando victorias, o resetear el marcador para empezar de cero.</p>
+				</div>
+			</div>
+
+			<main class="gameBoard" id="gb">
+				<span class="colIndex colIndex__A">A</span>
+				<span class="colIndex colIndex__B">B</span>
+				<span class="colIndex colIndex__C">C</span>
+
+				<span class="rowIndex rowIndex__1">1</span>
+				<span class="rowIndex rowIndex__2">2</span>
+				<span class="rowIndex rowIndex__3">3</span>
+
+				<div class="box a1">
+					<button class="checkBox" id="a1"><i class="fa-solid"></i></button>
+				</div>
+
+				<div class="box b1">
+					<button class="checkBox" id="b1"><i class="fa-solid"></i></button>
+				</div>
+
+				<div class="box c1">
+					<button class="checkBox" id="c1"><i class="fa-solid"></i></button>
+				</div>
+
+				<div class="box a2">
+					<button class="checkBox" id="a2"><i class="fa-solid"></i></button>
+				</div>
+
+				<div class="box b2">
+					<button class="checkBox" id="b2"><i class="fa-solid"></i></button>
+				</div>
+
+				<div class="box c2">
+					<button class="checkBox" id="c2"><i class="fa-solid"></i></button>
+				</div>
+
+				<div class="box a3">
+					<button class="checkBox" id="a3"><i class="fa-solid"></i></button>
+				</div>
+
+				<div class="box b3">
+					<button class="checkBox" id="b3"><i class="fa-solid"></i></button>
+				</div>
+
+				<div class="box c3">
+					<button class="checkBox" id="c3"><i class="fa-solid"></i></button>
+				</div>
+			</main>
+
+			<footer class="buttons">
+				<button class="startGame footer__button" id="button--start">Start game</button>
+				<button class="resetScore footer__button" id="button--reset">Reset scores</button>
+			</footer>
+		</div>
+
+		<script src="funciones.js"></script>
+	</body>
+</html>
